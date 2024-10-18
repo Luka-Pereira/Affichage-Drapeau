@@ -38,6 +38,7 @@ MainWindow::MainWindow(QWidget *parent)
     Hlayout2->addWidget(B13);
     Hlayout2->addWidget(B14);
     Hlayout3->addWidget(B15);
+    Hlayout3->addWidget(B16);
 
 
     Pagelayout->addLayout(Hlayout1);
@@ -59,6 +60,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(B13, SIGNAL(clicked()), this, SLOT(Drapeau_PAYSBAS()));
     connect(B14, SIGNAL(clicked()), this, SLOT(Drapeau_ROUMANIE()));
     connect(B15, SIGNAL(clicked()), this, SLOT(Drapeau_PORTUGAL()));
+    connect(B16, SIGNAL(clicked()), this, SLOT(Drapeau_UNITEDKINGDOM()));
 
     QWidget *widget = new QWidget;
     widget->setLayout(Pagelayout);
@@ -145,6 +147,20 @@ void MainWindow::Drapeau_PORTUGAL()
     QWidget *widget = new QWidget;
     widget->resize(700, 350);
     widget->setWindowTitle("Portugal");
+    widget->setPalette(palette);
+    widget->show();
+}
+
+void MainWindow::Drapeau_UNITEDKINGDOM()
+{
+    QPixmap uk("/home/luka/Téléchargements/uk.png");
+    uk = uk.scaled(this->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+    QPalette palette;
+    palette.setBrush(QPalette::Window, QBrush(uk));
+
+    QWidget *widget = new QWidget;
+    widget->resize(700, 380);
+    widget->setWindowTitle("uk");
     widget->setPalette(palette);
     widget->show();
 }

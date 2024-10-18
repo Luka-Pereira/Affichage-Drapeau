@@ -35,9 +35,11 @@ public:
     QPushButton *B13 = new QPushButton("PAYS-BAS");
     QPushButton *B14 = new QPushButton("ROUMANIE");
     QPushButton *B15 = new QPushButton("PORTUGAL");
+    QPushButton *B16 = new QPushButton("UNITEDKINGDOM");
 
     QPalette palette;
     void set_bkgnd();
+
 
 public slots:
     void Drapeau_ALLEMAGNE();
@@ -55,6 +57,7 @@ public slots:
     void Drapeau_PAYSBAS();
     void Drapeau_ROUMANIE();
     void Drapeau_PORTUGAL();
+    void Drapeau_UNITEDKINGDOM();
 
 
 private:
